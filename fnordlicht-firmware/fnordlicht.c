@@ -33,6 +33,7 @@
 #include "../common/common.h"
 #include "pwm.h"
 #include "uart.h"
+#include "dmx.h"
 #include "remote.h"
 #include "timer.h"
 #include "script.h"
@@ -76,6 +77,7 @@ int main(void)
     pwm_init();
     timer_init();
     uart_init();
+    dmx_init();
     storage_init();
     remote_init();
     script_init();

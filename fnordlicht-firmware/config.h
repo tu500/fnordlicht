@@ -67,6 +67,17 @@
 #define CONFIG_SERIAL_BAUDRATE 19200
 #endif
 
+/* don't include dmx support per default */
+#ifndef CONFIG_DMX
+#define CONFIG_DMX 0
+#endif
+
+/* set default DMX address to 1 */
+/* 1 is the first usable channel on DMX-512 */
+#ifndef DMX_ADDRESS
+#define DMX_ADDRESS 1
+#endif
+
 /* configure master mode:
  *   0   disable master mode completely
  *   1   check if master mode jumper is set (default)
@@ -74,6 +85,11 @@
  */
 #ifndef CONFIG_MASTER_MODE
 #define CONFIG_MASTER_MODE 1
+#endif
+
+
+#if (CONFIG_DMX == 1) && (CONFIG_SERIAL == 1)
+    #error "DMX and Serial are mutually exclusive"
 #endif
 
 /* check if hardware is valid */

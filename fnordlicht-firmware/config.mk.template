@@ -67,6 +67,12 @@
 # default baudrate
 #CONFIG_SERIAL_BAUDRATE = 19200
 
+# include DMX support
+#CONFIG_DMX = 1
+
+# DMX address
+#CONFIG_DMX_ADDRESS = 1
+
 # configure master mode:
 #   0   disable master mode completely
 #   1   check if master mode jumper is set (default)
