@@ -54,7 +54,7 @@ static void startup(void)
 
 #if !CONFIG_SCRIPT
         /* or set some default color */
-        global_pwm.target.red = 50;
+        global_pwm.target.rgb.red = 50;
 #endif
     }
 }

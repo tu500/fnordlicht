@@ -33,7 +33,7 @@
 #if CONFIG_SCRIPT
 
 /* global list of programs */
-PROGMEM program_handler static_programs[] = {
+const PROGMEM program_handler static_programs[] = {
     program_colorwheel,
     program_random,
     program_replay,
