@@ -27,7 +27,7 @@
 #include <avr/io.h>
 
 /* cpu specific configuration registers */
-#if defined(__AVR_ATmega8__)
+#if defined(__AVR_ATmega8__) || defined(__AVR_ATmega8A__)
 
 #define _TIMSK_TIMER1 TIMSK
 #define _UCSRB_UART0 UCSRB

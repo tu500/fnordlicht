@@ -123,6 +123,9 @@ endif
 ifeq ($(MCU),atmega8)
 	AVRDUDE_MCU=m8
 endif
+ifeq ($(MCU),atmega8a)
+	AVRDUDE_MCU=m8
+endif
 ifeq ($(MCU),atmega48)
 	AVRDUDE_MCU=m48
 endif

@@ -29,7 +29,7 @@ static volatile uint8_t internal_counter;
 
 void timer_init(void)
 {
-#if defined(__AVR_ATmega8__)
+#if defined(__AVR_ATmega8__) || defined(__AVR_ATmega8A__)
     /* initialize timer2, CTC at 10ms, prescaler 1024 */
     OCR2 = F_CPU/1024/100;
     TCCR2 = _BV(WGM21) | _BV(CS22) | _BV(CS21) | _BV(CS20);
@@ -67,7 +67,7 @@ bool timer_expired(timer_t *t)
 }
 
 /* timer interrupt function */
-#if defined(__AVR_ATmega8__)
+#if defined(__AVR_ATmega8__) || defined(__AVR_ATmega8A__)
 ISR(TIMER2_COMP_vect, ISR_NOBLOCK) {
     internal_counter++;
 }

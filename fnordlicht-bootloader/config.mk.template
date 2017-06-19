@@ -30,6 +30,7 @@
 #
 # possible values:
 # - atmega8
+# - atmega8a
 # - atmega88
 # - atmega168
 #

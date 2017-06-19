@@ -94,6 +94,20 @@ ifeq ($(MCU),atmega8)
 	# use custom linker script
 	LDFLAGS += -T avr4.x
 endif
+ifeq ($(MCU),atmega8a)
+	# atmega8 with 1024 words bootloader:
+	# bootloader section starts at 0xc00 (word-address) == 0x1800 (byte-address)
+	#BOOT_SECTION_START = 0x1800
+	#
+	# atmega8 with 512 words bootloader:
+	# bootloader section starts at 0xe00 (word-address) == 0x1c00 (byte-address)
+	BOOT_SECTION_START = 0x1c00
+	# 7kb data memory (raw memory minus bootloader space)
+	DATA_MEM = 7
+
+	# use custom linker script
+	LDFLAGS += -T avr4.x
+endif
 ifeq ($(MCU),atmega88)
 	# atmega88 with 1024 words bootloader:
 	# bootloader section starts at 0xc00 (word-address) == 0x1800 (byte-address)

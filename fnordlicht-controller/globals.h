@@ -39,7 +39,7 @@
 #endif
 
 /* check if this cpu is supported */
-#if !(defined(__AVR_ATmega8__) || defined(__AVR_ATmega88__) || defined(__AVR_ATmega168__))
+#if !(defined(__AVR_ATmega8__) || defined(__AVR_ATmega8A__) || defined(__AVR_ATmega88__) || defined(__AVR_ATmega168__))
 #error "this cpu is not supported yet!"
 #endif
 

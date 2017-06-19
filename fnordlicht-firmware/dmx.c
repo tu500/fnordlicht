@@ -34,7 +34,7 @@
 #include "uart.h"
 
 /* define uart mode (8N2) */
-#if defined(__AVR_ATmega8__)
+#if defined(__AVR_ATmega8__) || defined(__AVR_ATmega8A__)
 /* in atmega8, we need a special switching bit
  * for addressing UCSRC */
 #define UART_UCSRC _BV(URSEL) | _BV(UCSZ0) | _BV(UCSZ1) | _BV(USBS)
